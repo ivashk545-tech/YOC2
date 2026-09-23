@@ -296,3 +296,13 @@ h1{font-size:44px;letter-spacing:-.025em}
 .k-v span{font-family:'NG'}
 .cover-h{font-size:54px;max-width:1150px;margin-top:16px}.cover-script{margin-top:70px}.cover-pills{margin-top:40px}
 .cover-script{margin-top:150px}.cover-h{font-size:58px}.cover-pills{margin-top:52px}
+/* ---- fix horizontal overflow with Akzidenz ---- */
+h1{font-size:40px}
+.grid-obj{grid-template-columns:360px 1.05fr .85fr}
+.grid-prof{grid-template-columns:390px 1fr}
+.grid-sec{grid-template-columns:390px 1.4fr .6fr}
+.grid2>*,.res-grid>*,.res-body>*,.grid-obj>*,.grid-prof>*,.grid-sec>*{min-width:0}
+.chart-card svg,.wells svg{max-width:100%;height:auto;display:block}
+.res-body{grid-template-columns:1fr 240px}
+.res-c svg{width:240px}
+.res-big b{font-size:20px}

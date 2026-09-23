@@ -465,7 +465,7 @@ page(f'''
 page(f'''
 {top('light')}
 <div class="grid-maps">
-  {fig('image13.png', 'Рис. 5. Карты распределения УЭС на глубинах 500 (а), 1000 (б) и 2000 (в) метров по данным ЗС: 1 – пункты ЗС; 2 – региональный Онон-Туринский разлом; 3 – геоэлектрические комплексы: 1 – Нарасунская мульда; 2 – Курулгинский выступ (граниты); 3 – Улетуй-Харалгинская котловина; 4 – зона рассланцевания в фундаменте (коллектор).', 560)}
+  {fig('image13.png', 'Рис. 5. Карты распределения УЭС на глубинах 500 (а), 1000 (б) и 2000 (в) метров по данным ЗС: 1 – пункты ЗС; 2 – региональный Онон-Туринский разлом; 3 – геоэлектрические комплексы: 1 – Нарасунская мульда; 2 – Курулгинский выступ (граниты); 3 – Улетуй-Харалгинская котловина; 4 – зона рассланцевания в фундаменте (коллектор).', 530)}
   <div>
     {head('ловушки', 'Коллекторы<br>и покрышки')}
     <div class="card sage-card">
@@ -551,6 +551,6 @@ css = open('style.css').read()
 html = ['<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Ононская впадина — аналитическая справка</title><style>', css, '</style></head><body>']
 for i, (b, theme, extra) in enumerate(PAGES):
     html.append(f'<section class="page {theme}">{b.replace("{N}", f"{i+1:02d}")}</section>')
-html.append("<script>addEventListener('load',()=>{const bad=[];document.querySelectorAll('.page').forEach((p,i)=>{const r=p.getBoundingClientRect();let m=0;p.querySelectorAll('*').forEach(e=>{if(e.closest('.bgsvg'))return;const b=e.getBoundingClientRect();if(b.height>0)m=Math.max(m,b.bottom-r.top)});if(m>p.clientHeight-20)bad.push((i+1)+':'+Math.round(m))});document.body.setAttribute('data-over',bad.join(' ')||'none')})</script>" + '</body></html>')
+html.append("<script>addEventListener('load',()=>{const bad=[];document.querySelectorAll('.page').forEach((p,i)=>{const r=p.getBoundingClientRect();let m=0;p.querySelectorAll('*').forEach(e=>{if(e.closest('.bgsvg'))return;const b=e.getBoundingClientRect();if(b.height>0)m=Math.max(m,b.bottom-r.top)});if(m>p.clientHeight-20)bad.push((i+1)+':'+Math.round(m))});document.querySelectorAll('.page *').forEach(e=>{if(e.closest('svg'))return;if(e.clientWidth>0&&e.scrollWidth>e.clientWidth+1){const pg=[...document.querySelectorAll('.page')].indexOf(e.closest('.page'))+1;bad.push('H'+pg+':'+e.tagName+'.'+e.className+'('+e.scrollWidth+'>'+e.clientWidth+')')}});document.body.setAttribute('data-over',bad.join(' ')||'none')})</script>" + '</body></html>')
 open('index.html', 'w').write(m3(''.join(html)))
 print(len(PAGES), 'pages')
