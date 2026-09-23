@@ -281,3 +281,18 @@ figcaption{font-size:11.5px;line-height:1.4;color:var(--muted);margin-top:9px;pa
 .conf{height:290px}
 .endsrc{bottom:34px}
 .grid-comp .card-foot{margin-top:auto}
+/* ---- Akzidenz headings/figures + business labels ---- */
+@font-face{font-family:'AG';src:url(fonts/AG.otf)}
+h1,h2,.card-t,.f-t,.a-n,.res-name,.cover-h,.rb-t,
+.num,.kicker .no,.k-v,.mini-kpis b,.hist b,.hl b,.f-n,.pill b,.cmp-row b,.res-big b,.out span,.d-big,.c-val,.w-in,.w-d,
+.wells-t td:first-child,.wells-t td:nth-child(2),.wells-t td:nth-child(3){font-family:'AG','NG',sans-serif}
+.rb-t{font-family:'NG'}
+h1{font-size:44px;letter-spacing:-.025em}
+.cover-h{font-size:64px}
+.kicker{font-family:'NG',sans-serif;font-size:14px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px;align-items:center}
+.kicker .no{top:0;font-size:12px;letter-spacing:.06em}
+.script-sm{font-family:'NG',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1.2}
+.cover-script{font-family:'NG',sans-serif;font-size:22px;letter-spacing:.22em;text-transform:uppercase;padding-top:12px;border-top:2px solid var(--lime);display:inline-block}
+.k-v span{font-family:'NG'}
+.cover-h{font-size:54px;max-width:1150px;margin-top:16px}.cover-script{margin-top:70px}.cover-pills{margin-top:40px}
+.cover-script{margin-top:150px}.cover-h{font-size:58px}.cover-pills{margin-top:52px}

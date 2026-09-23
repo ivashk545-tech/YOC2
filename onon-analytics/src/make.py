@@ -551,6 +551,6 @@ css = open('style.css').read()
 html = ['<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Ононская впадина — аналитическая справка</title><style>', css, '</style></head><body>']
 for i, (b, theme, extra) in enumerate(PAGES):
     html.append(f'<section class="page {theme}">{b.replace("{N}", f"{i+1:02d}")}</section>')
-html.append('</body></html>')
+html.append("<script>addEventListener('load',()=>{const bad=[];document.querySelectorAll('.page').forEach((p,i)=>{const r=p.getBoundingClientRect();let m=0;p.querySelectorAll('*').forEach(e=>{if(e.closest('.bgsvg'))return;const b=e.getBoundingClientRect();if(b.height>0)m=Math.max(m,b.bottom-r.top)});if(m>p.clientHeight-20)bad.push((i+1)+':'+Math.round(m))});document.body.setAttribute('data-over',bad.join(' ')||'none')})</script>" + '</body></html>')
 open('index.html', 'w').write(m3(''.join(html)))
 print(len(PAGES), 'pages')

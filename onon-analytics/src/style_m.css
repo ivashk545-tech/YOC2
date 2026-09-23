@@ -226,3 +226,8 @@ figcaption{font-size:18px;line-height:1.42;color:var(--muted);margin-top:14px;pa
 .res .res-cls{margin:12px 22px 0}
 .res-m{font-size:17px;padding:10px 22px 0;opacity:.75}
 .res+.kvl .kv-r{padding:9px 0}.res{margin-bottom:14px}
+/* ---- business labels instead of script ---- */
+.kicker{font-family:'NG',sans-serif;font-size:20px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
+.kicker.sm{font-size:18px;margin-bottom:26px}
+.kicker .no{letter-spacing:.06em}
+.cover-script{font-family:'NG',sans-serif;font-size:24px;letter-spacing:.22em;text-transform:uppercase;padding-top:14px;border-top:2px solid var(--lime);display:inline-block}
